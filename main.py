@@ -11,8 +11,10 @@ options.add_argument('--disable-gpu')
 
 driver = webdriver.Chrome(service=Service("/usr/bin/chromedriver"), options=options)
 
-driver.get("https://example.com")
+driver.get("https://google.com")
 print("Page title:", driver.title)
+print("Current URL:", driver.current_url)
+print("Source code:", driver.page_source)
 
 time.sleep(2)
 driver.quit()
